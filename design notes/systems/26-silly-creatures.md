@@ -63,7 +63,9 @@ Amphibious isopods that often eat non-guilded roaches or leaf litter.
 
 **White isopod:** same as before, but with a calcified shell.
 
-### Full isopod (15 cm)
+### Full isopod (up to 20 cm)
+
+Adult isopod up to 20 cm long. About as smart as a crow: simple tool-using behavior, collaborative (gang up, make noise to each other when frightened, social groups), but not sapient. Cannot be said to be more than an animal. Vaguely parallel to White Knuckle grubs in being holdable/interactive small creatures with group behavior, but grubs are larvae of a much larger, more significant organism (adult ~ Mother size); isopods stay small and animal.
 
 - Avoids loud noises and eats leaves. Gang up on anything very weak or some plants, eating it.
 - Attracted to music.
