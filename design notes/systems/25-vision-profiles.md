@@ -7,6 +7,17 @@ Not a new Resolve fork. Not a new kit. A resource you stamp on the pawn or opera
 **Mode** (Normal / Expanded / Halo360) is the supertype. It decides AI cone, accuracy, reaction, and whether rear exists.
 **Projection** is the concrete mapping the player camera uses under that mode.
 
+Cone angles (`coneDeg`, `peripheralConeDeg`) are adjustable but clamped at runtime:
+
+| Mode | Max cone |
+|---|---|
+| Normal (rectilinear) | 140° |
+| Expanded (edge blend) | 220° |
+| Expanded (full Pannini) | 270° |
+| Halo360 | 360° |
+
+Minimum is always 45°. `EffectiveConeDeg` and `ApplyTo` use the clamped values.
+
 ## Modes (supertypes)
 
 | Mode | Player | NPC / AI |
@@ -18,17 +29,17 @@ Not a new Resolve fork. Not a new kit. A resource you stamp on the pawn or opera
 ## Projections (under the modes)
 
 ### Normal
-- **Rectilinear** — classic perspective. Straight lines stay straight.
+- **Rectilinear** — classic perspective. Straight lines stay straight. Cap ~140°.
 
 ### Expanded
-- **ExpandedEdgePannini** — rectilinear in the center; linearly interpolates to Pannini on the vertical edge bands (default 0–10% and 90–100% of screen height). Vertical-only so the aiming plane stays honest.
-- **Pannini** — full Pannini. Verticals and lines through screen center stay straight. Good at 120–150°.
+- **ExpandedEdgePannini** — rectilinear in the center; linearly interpolates to Pannini on the vertical edge bands (default 0–10% and 90–100% of screen height). Vertical-only so the aiming plane stays honest. Cap ~220°.
+- **Pannini** — full Pannini. Verticals and lines through screen center stay straight. Cap ~270°.
 
 ### Halo360
 - **WarpEdgeBubble** — protected center oval is rectilinear; outside the oval the mapping hyper-compresses into a fisheye bubble.
 - **FisheyeEquidistant** / **FisheyeStereographic** / **FisheyeEquisolid** — classic fisheye mappings.
 - **Equirectangular** — full panorama unwrap.
-- **SphericalHalo** — Devil Daggers / Hyper Demon style. Periphery is pulled into the frame without crushing the center the way classic fisheye does. Up to ~180° usable.
+- **SphericalHalo** — Devil Daggers / Hyper Demon style. Periphery is pulled into the frame without crushing the center the way classic fisheye does. Cap 360°.
 
 ## Player side
 
@@ -41,7 +52,7 @@ Expanded is the practical high-awareness option. Halo is the stylistic one.
 
 Same resource, fewer knobs. The brain reads:
 
-- Effective vision cone (from Mode)
+- Effective vision cone (from Mode, already clamped)
 - Accuracy multiplier when the target is outside the normal cone but inside the peripheral (or anywhere for Halo)
 - Reaction time multiplier (Halo slows it)
 - Whether rear is visible at all (Halo = yes)
