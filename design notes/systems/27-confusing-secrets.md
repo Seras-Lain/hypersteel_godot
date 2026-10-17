@@ -43,6 +43,7 @@ Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
 | HP | ~−30% | Civilian, no baked cyber. |
 | Plate | none by default; medium personnel armor if she loots a rack | |
 | Starting weapon | small pocketknife (decently proficient); may later grab a pistol | |
+| Items | knife, lighter, keys, wallet, adrenaline inhaler (mild buff) | |
 
 ### Behavior
 
@@ -50,6 +51,30 @@ Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
 - Gets nervous in Ryko’s presence (knows exactly what she is).
 - If guns fire within earshot / line of sight in the past five minutes: rushes to break into an equipment rack for medium personnel armor, or hides and steals gear.
 - Otherwise tries to stay out of the way.
+- Capable of simple parkour. Relies on evasion; cannot generate superhuman force.
+- May scavenge any nearby item if she needs it or it is more powerful. Especially good with hack tools.
+
+### If Ryko tries to kill her
+
+Dev screams: “PAUSE! PAUSE! RELOAD SAVE! FUCK! FUCK! FUCK!” and attempts to sprint away. If close enough, she dolphin-dives to grab one of Ryko’s stowed guns and fires while sprinting backwards.
+
+### If killed
+
+Dev flips the killer off. Her hand locks on the trigger of any weapon she is holding, firing until the mag empties if it is full-auto.
+
+### If critically wounded
+
+Dev attempts to tie a tourniquet out of her own jacket.
+
+### Items / gifts
+
+If given an item: “Oh! Thank you!” then an inspect animation before deciding to use it or store it. If not in danger, she may offer a hug in response.
+
+Adrenaline inhaler: mild buff when used.
+
+### If Ryko is dying and the dev is not
+
+Dev attempts to drag Ryko to cover instead of letting her die, which lets Ryko regenerate.
 
 ### Opening
 
@@ -90,6 +115,14 @@ Dev makes a motion as if to pull off a VR headset. Instead her fingers only grip
 
 Dev realizes this is inexplicably real. She frantically looks around for a better weapon than her pistol, patting herself down. She finds nothing. She whips out her phone, tries looking at it, and finds it is incompatible with cell networks. She takes a picture of herself with Ryko and puts the phone back in her pocket.
 
+### If recruited
+
+Dev attempts to finish the mission segment with Ryko. Afterward she explains that Ryko can steal a large cargo drone sent down by the aircraft to skip a massively long drone sequence by hiding in a thousand-liter fuel tank at a gas station.
+
+“If you go in there, I can attack a drone to pull the network’s attention to here, and they’re programmed to take resources.”
+
+Dev does not enter the tank: “because I would die in there. Unlike you I need to breathe air.”
+
 ### Perks (joke AI stamps, not shop)
 
 - **Advanced tactical planning** — AI can mentally plan ahead, queue actions, and has corner-checking prerequisites.
@@ -101,4 +134,4 @@ Dev realizes this is inexplicably real. She frantically looks around for a bette
 - **Terror** — same fear response as enemies.
 - **Poor training** — reduced accuracy, increased fear, easier to fool, increased focus time on guns. Cannot hit shots reliably without ADS.
 
-The joke is that she understands the systems better than the soldiers and still has civilian numbers. She plans, glitches, and learns weapons quickly, then misses because she is not an operator. The VR-port / isekai panic is the contained fourth-wall beat; it does not change the world or the campaign.
+The joke is that she understands the systems better than the soldiers and still has civilian numbers. She plans, glitches, and learns weapons quickly, then misses because she is not an operator. The VR-port / isekai panic is the contained fourth-wall beat; it does not change the world or the campaign. The recruit path offers a one-time skip of a long drone sequence and then ends.
