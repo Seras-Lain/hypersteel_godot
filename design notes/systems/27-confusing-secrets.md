@@ -25,6 +25,10 @@ It is a conventional door, trapped with an explosive charge that detonates when 
 
 Secret non-hostile civilian encounter. The developer as a person in the level. She knows what Ryko is and gets nervous around her. Not a combat roster entry. Not a boss. Dies to ordinary packets.
 
+### Location
+
+Japan, absurdly high up in a building during the drone swarm. Walk onto an elevator, hit the top floor. Encounter starts on arrival. (American self-insert in Japan is the joke; does not extend the plot.)
+
 ### Sheet (vs operator human-meat baseline with cyber+chems)
 
 Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
@@ -38,7 +42,7 @@ Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
 | Stamina | ~−10% | Odd jobs, not operator endurance. |
 | HP | ~−30% | Civilian, no baked cyber. |
 | Plate | none by default; medium personnel armor if she loots a rack | |
-| Starting weapon | small pocketknife (decently proficient) | |
+| Starting weapon | small pocketknife (decently proficient); may later grab a pistol | |
 
 ### Behavior
 
@@ -46,6 +50,43 @@ Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
 - Gets nervous in Ryko’s presence (knows exactly what she is).
 - If guns fire within earshot / line of sight in the past five minutes: rushes to break into an equipment rack for medium personnel armor, or hides and steals gear.
 - Otherwise tries to stay out of the way.
+
+### Opening
+
+Dev: “OH SHIT. Ryko? What are you doing here”
+
+Possible player responses:
+- [getting a better vantage point]
+- [calling down turrets]
+- [here to kill you]
+- [examine them]
+- [recruit the strange individual]
+
+### Why she is there / dialogue beat
+
+Dev states she is “testing a VR port of the game.”
+
+Ryko is confused by the idea she is in a game. “Do you believe in simulation theory or something? This is quite real.”
+
+Dev: “real is a point of reference, I suppose. I guess it doesn’t matter if this world is a game as long as we enjoy it.”
+
+Dev doesn’t bother explaining further. She is terrified when Ryko picks her up, because she somehow feels it in real life.
+
+Dev: “Oh shit. Is this an isekai sword art online situation?”
+
+Ryko: “I have several sword arts downloaded from online, but if you have been isekai’d here it would be great if you used some magic power to handle this situation.”
+
+Dev makes various frantic motions with her hands, attempts to fire magic slashes or lightning. Nothing happens.
+
+Ryko: “you’re just another baseline human aren’t you. Who put hallucinogens in your food.”
+
+Dev: “fuck you. I made this place. I made you. I made every— OH SHIT”
+
+Dev dodge-rolls a micro missile.
+
+Dev: “Why do my ears ring. Why is this real. Oh fuck I’m gonna die. Oh fuck. Oh fuck. Oh god. How is this possible. This is impossible. Shit. Fuck.”
+
+Dev frantically looks around for a better weapon than her pistol.
 
 ### Perks (joke AI stamps, not shop)
 
@@ -58,4 +99,4 @@ Operators are at least 3× stronger (super soldiers). Raw civilian numbers:
 - **Terror** — same fear response as enemies.
 - **Poor training** — reduced accuracy, increased fear, easier to fool, increased focus time on guns. Cannot hit shots reliably without ADS.
 
-The joke is that she understands the systems better than the soldiers and still has civilian numbers. She plans, glitches, and learns weapons quickly, then misses because she is not an operator.
+The joke is that she understands the systems better than the soldiers and still has civilian numbers. She plans, glitches, and learns weapons quickly, then misses because she is not an operator. The VR-port / isekai panic is the contained fourth-wall beat; it does not change the world or the campaign.
