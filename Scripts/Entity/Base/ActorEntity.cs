@@ -13,6 +13,7 @@ public partial class ActorEntity : CharacterBody3D, IDamageable
 	[Export] public FeelingsComponent feelings;
 	[Export] public JumpKit jumpKit;
 	[Export] public EntityStats stats;
+	[Export] public VisionProfile vision;
 	[Export] public StringName entityId = "actor";
 	[Export] public float Mass = 80f;
 	[Export] public bool collisionDamage = true;
@@ -33,6 +34,8 @@ public partial class ActorEntity : CharacterBody3D, IDamageable
 	{
 		stats ??= new EntityStats { Mass = Mass };
 		Mass = stats.Mass;
+		if (vision != null)
+			vision.ApplyTo(stats);
 		KitComposer.Compose(this, kit);
 		health ??= GetNodeOrNull<HealthComponent>("Health");
 		health ??= FindChild("Health", true, false) as HealthComponent;
