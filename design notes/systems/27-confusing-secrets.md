@@ -86,7 +86,9 @@ Dev dodge-rolls a micro missile.
 
 Dev: “Why do my ears ring. Why is this real. Oh fuck I’m gonna die. Oh fuck. Oh fuck. Oh god. How is this possible. This is impossible. Shit. Fuck.”
 
-Dev frantically looks around for a better weapon than her pistol.
+Dev makes a motion as if to pull off a VR headset. Instead her fingers only grip her brown hair and face. She palms the front of her face, poking herself in the eye and twitching. It sinks in that this is entirely real. She tries the motion again with more force, only succeeds in cracking her neck and saying “owww.”
+
+Dev realizes this is inexplicably real. She frantically looks around for a better weapon than her pistol, patting herself down. She finds nothing. She whips out her phone, tries looking at it, and finds it is incompatible with cell networks. She takes a picture of herself with Ryko and puts the phone back in her pocket.
 
 ### Perks (joke AI stamps, not shop)
 
