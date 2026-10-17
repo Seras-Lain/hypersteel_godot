@@ -4,11 +4,13 @@
 
 Rare, confusing, or mean little things that exist in the world and do not announce themselves.
 
+White Knuckle supplies some tonal inspiration for a few of these (and for certain creatures), but the implementations are significantly different. These are not ports, not anomalous objects, and not the same rules.
+
 ---
 
 ## Explosive doors
 
-Rare trap. Inspired by the cursed door in White Knuckle, but not anomalous.
+Rare trap. The White Knuckle cursed door is a loose reference point only. This is not an anomalous door.
 
 It is a conventional door, trapped with an explosive charge that detonates when opened. Looks like a normal door with one of those bars over it.
 
