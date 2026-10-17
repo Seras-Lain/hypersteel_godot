@@ -6,6 +6,7 @@ namespace Hypersteel.Entity;
 /// Drop-in vision sheet.
 /// Mode (Normal / Expanded / Halo360) is the supertype that drives AI cone / accuracy / reaction.
 /// Projection is the concrete camera mapping the player uses under that mode.
+/// Cone angles are adjustable but clamped per mode (rectilinear cannot go as wide as Halo).
 /// Stamp on ActorEntity the same way as EntityStats.
 /// </summary>
 [GlobalClass]
@@ -39,13 +40,15 @@ public partial class VisionProfile : Resource
 		SphericalHalo,         // Devil Daggers / Hyper Demon style: periphery pulled in without crushing center
 	}
 
+	public const float MinConeDeg = 45f;
+
 	[Export] public Mode mode = Mode.Normal;
 	[Export] public Projection projection = Projection.Rectilinear;
 
-	/// <summary>Base horizontal cone (degrees). Normal default ~110.</summary>
+	/// <summary>Base horizontal cone (degrees). Clamped at runtime by MaxConeForMode.</summary>
 	[Export] public float coneDeg = 110f;
 
-	/// <summary>Expanded peripheral cone. Used by Expanded and as the soft outer for Halo.</summary>
+	/// <summary>Expanded peripheral cone. Clamped at runtime. Used by Expanded and as the soft outer for Halo.</summary>
 	[Export] public float peripheralConeDeg = 200f;
 
 	/// <summary>Accuracy multiplier when target is outside the normal cone but inside peripheral. 1 = full.</summary>
@@ -66,11 +69,26 @@ public partial class VisionProfile : Resource
 	/// <summary>WarpEdgeBubble: half-size of the protected center oval (0–1, fraction of half-screen).</summary>
 	[Export] public float bubbleInner = 0.45f;
 
+	/// <summary>
+	/// Maximum legal cone for the current mode / projection.
+	/// Normal/rectilinear ~140, Expanded/Pannini ~270, Halo ~360.
+	/// </summary>
+	public float MaxConeForMode => mode switch
+	{
+		Mode.Normal => 140f,
+		Mode.Expanded => projection == Projection.Pannini ? 270f : 220f,
+		Mode.Halo360 => 360f,
+		_ => 140f,
+	};
+
+	public float ClampedConeDeg => Mathf.Clamp(coneDeg, MinConeDeg, MaxConeForMode);
+	public float ClampedPeripheralDeg => Mathf.Clamp(peripheralConeDeg, MinConeDeg, MaxConeForMode);
+
 	public float EffectiveConeDeg => mode switch
 	{
-		Mode.Expanded => Mathf.Max(coneDeg, peripheralConeDeg),
-		Mode.Halo360 => 360f,
-		_ => coneDeg,
+		Mode.Expanded => Mathf.Max(ClampedConeDeg, ClampedPeripheralDeg),
+		Mode.Halo360 => Mathf.Min(360f, MaxConeForMode),
+		_ => ClampedConeDeg,
 	};
 
 	public bool CanSeeRear => mode == Mode.Halo360;
@@ -86,16 +104,16 @@ public partial class VisionProfile : Resource
 
 	public float AccuracyAtAngle(float angleFromLookDeg)
 	{
-		var half = coneDeg * 0.5f;
+		var half = ClampedConeDeg * 0.5f;
 		if (angleFromLookDeg <= half) return 1f;
 		if (mode == Mode.Normal) return 0f;
 		if (mode == Mode.Halo360) return peripheralAccuracy;
-		var periHalf = peripheralConeDeg * 0.5f;
+		var periHalf = ClampedPeripheralDeg * 0.5f;
 		if (angleFromLookDeg <= periHalf) return peripheralAccuracy;
 		return 0f;
 	}
 
-	/// <summary>Apply the simplified numbers onto an existing EntityStats (AI path).</summary>
+	/// <summary>Apply the simplified numbers onto an existing EntityStats (AI path). Uses clamped values.</summary>
 	public void ApplyTo(EntityStats stats)
 	{
 		if (stats == null) return;
