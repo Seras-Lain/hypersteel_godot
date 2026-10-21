@@ -227,6 +227,7 @@ Second copy of the same attribute = half effect.
 | FleshBone | As Flesh + local armor +1 vs pierce on that socket (ribs, skull). |
 | FleshBorged | Flesh + Metal or Composite plate on top; bleed reduced; Zap/Amped legal. |
 | MetalFoamPadded | Kinetic/fall down; heat soaks; worse ion coupling than solid metal; mild AP −0.5 (round at ladder). |
+| MagneticWhipple | Layers of thin metal pushed out by a Powered Magnet. Low AP addition over Frame, but good at protecting Frame from Ions and Projectiles. Needs power to retain shape. |
 
 ### Weakening (on the plate/segment)
 
